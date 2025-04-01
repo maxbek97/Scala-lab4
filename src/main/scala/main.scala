@@ -16,12 +16,12 @@ def task_1(x: Double): Double = x match {
 def tab(fx: Double => Double, a: Double, b: Double, step: Double): Unit = {
     var x = a
     println("x     f(x)")
-    while (x < b) do
+    while x < b do
         println(f"$x%.2f" + "     " + f"${fx(x)}%.2f")
         x += step
 }
 
 def task_2(w:Double): Double = w match {
-    case w if (w != 0 && math.cos(w)/math.sin(w) < 0.5) => -math.cos(w)/math.sin(w)
+    case w if w != 0 && math.cos(w)/math.sin(w) < 0.5 => -math.cos(w)/math.sin(w)
     case _ => 1
 }
